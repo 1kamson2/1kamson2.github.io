@@ -31,16 +31,38 @@ body {
   background-color: #1e2124;
 }
 
-header > h1 {
+header>h1 {
   text-align: center;
   font-size: 4em;
 }
 
 section.projects {
   display: flex;
-  align-content: center;
-  align-items: center;
-  justify-content: center;
+  align-content: right;
+  align-items: right;
+  justify-content: right;
   gap: 3em;
+  float: right;
 }
 
+section.about-me>div.pic-box {
+  height: 400px;
+  width: 500px;
+  border-radius: 30px;
+  background: #282b30;
+}
+
+.contact-info-box {
+  margin-top: 15px;
+  gap: 20px;
+  height: 75px;
+  width: 500px;
+  border-radius: 30px;
+  background: #282b30;
+  text-align: center;
+}
+
+#main {
+  display: flex;
+  gap: 5em;
+}
