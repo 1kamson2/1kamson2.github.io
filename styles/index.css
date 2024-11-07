@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Charis+SIL:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Charis+SIL:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 .charis-sil-regular {
   font-family: "Charis SIL", serif;
@@ -37,11 +37,13 @@ header {
 header>h1 {
   text-align: center;
   font-size: 4em;
+  animation: slideIn 1.6s ease-out;
 }
 
-header>p {
-  font-size: 2em;
-  padding: 20px 60px 40px;
+p {
+  font-size: 1.5em;
+  /*padding: 20px 60px 40px;*/
+
   text-align: justify;
 }
 
@@ -55,7 +57,7 @@ section.projects {
   float: right;
 }
 
-section.about-me>div.pic-box {
+section.info>div.pic-box {
   height: 350px;
   width: 475px;
   border-radius: 30px;
