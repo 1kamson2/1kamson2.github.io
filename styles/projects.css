@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Charis+SIL:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+:root {
+  --outline: #302921;
+  --accent-color: #141314;
+  --bg-color: #1a1717;
+}
+
+body {
+  font-style: Helvetica, sans-serif;
+  color: WHITE;
+  background-color: var(--bg-color);
+}
+
+section.projects {
+  display: grid;
+  grid-template-columns: repeat(2, 0.5fr);
+  align-content: center;
+  gap: 5em;
+}
+
+#main {
+  animation: slideIn 2s ease-out;
+  gap: 5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}

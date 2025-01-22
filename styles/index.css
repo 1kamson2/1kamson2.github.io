@@ -1,33 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Charis+SIL:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
-.charis-sil-regular {
-  font-family: "Charis SIL", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.charis-sil-bold {
-  font-family: "Charis SIL", serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.charis-sil-regular-italic {
-  font-family: "Charis SIL", serif;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.charis-sil-bold-italic {
-  font-family: "Charis SIL", serif;
-  font-weight: 700;
-  font-style: italic;
+:root {
+  --outline: #302921;
+  --accent-color: #141314;
+  --bg-color: #1a1717;
 }
 
 body {
   font-style: Helvetica, sans-serif;
   color: WHITE;
-  background-color: #1e2124;
+  background-color: var(--bg-color);
 }
 
 header {
@@ -40,29 +22,36 @@ header>h1 {
   animation: slideIn 1.6s ease-out;
 }
 
-p {
-  font-size: 1.5em;
-  /*padding: 20px 60px 40px;*/
+h1 {
+  text-align: center;
+  font-size: 2em;
+  animation: slideIn 1.6s ease-out;
+}
 
+p {
+  font-size: 1em;
+  /*padding: 20px 60px 40px;*/
   text-align: justify;
 }
 
-section.projects {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-content: right;
-  align-items: right;
-  justify-content: right;
-  gap: 3em;
-  float: right;
+section.info-icons {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px 10px;
+  gap: 100px;
+}
+
+.icon:hover {
+  filter: drop-shadow(0 0 0.75rem rgb(10, 10, 10));
 }
 
 section.info>div.pic-box {
   height: 350px;
   width: 475px;
   border-radius: 30px;
-  box-shadow: 5px 3px 3px #36393e;
-  background: #282b30;
+  background: var(--accent-color);
   justify-content: center;
   align-content: center;
   object-position: center;
@@ -75,12 +64,43 @@ section.info>div.pic-box {
   height: 75px;
   width: 475px;
   border-radius: 30px;
-  background: #282b30;
-  box-shadow: 5px 3px 3px #36393e;
+  background: var(--bg-color);
   justify-content: center;
   align-content: center;
   object-position: center;
   text-align: center;
+}
+
+.button {
+  padding: 1px 2px 3px;
+  background-color: var(--bg-color);
+  border-radius: 10px;
+  outline: solid var(--outline);
+  text-align: center;
+  float: right;
+}
+
+.button:hover {
+  background-color: var(--outline);
+}
+
+.about-me {
+  font-family: "Charis SIL", serif;
+  padding: 20px 100px 20px;
+  font-size: 1.5em;
+  margin-top: 30px;
+  text-align: justify;
+}
+
+nav.pages {
+  font-family: "Charis SIL", serif;
+  font-size: 2em;
+  padding: 5px 5px 5px;
+  display: flex;
+  gap: 1em;
+  text-align: right;
+  align-content: right;
+  background-color: var(--accent-color);
 }
 
 @keyframes slideIn {
@@ -97,6 +117,7 @@ section.info>div.pic-box {
 
 #main {
   display: flex;
+  align-content: center;
   animation: slideIn 2s ease-out;
   gap: 5em;
 }
