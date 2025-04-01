@@ -1,112 +1,178 @@
 @import url("https://fonts.googleapis.com/css2?family=Charis+SIL:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
 :root {
-  --outline: #302921;
-  --accent-color: #141314;
-  --bg-color: #1a1717;
+  --bg-color: #1f2327;
+  --card-bg: #2a2e34;
+  --nav-bg: #343a40;
+  --header-bg: #2a2e34;
+  --text-color: #adb5bd;
+  --heading-color: #e9ecef;
+  --button-bg: #495057;
+  --button-text: #f8f9fa;
+  --button-hover-bg: #6c757d;
+  --button-hover-text: #ffffff;
+  --border-color: rgba(255, 255, 255, 0.08);
+  --icon-filter: grayscale(20%) opacity(80%);
+  --icon-hover-filter: none;
 }
 
 body {
-  font-style: Helvetica, sans-serif;
-  color: WHITE;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color: var(--text-color);
   background-color: var(--bg-color);
+  margin: 0;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 header {
-  animation: slideIn 1.2s ease-out;
+  background-color: var(--header-bg);
+  padding: 1.8rem 0;
+  border-bottom: 1px solid var(--border-color);
+  animation: fadeInDown 1s ease-out;
 }
 
 header>h1 {
   text-align: center;
-  font-size: 4em;
-  animation: slideIn 1.6s ease-out;
+  font-size: 2.8em;
+  color: var(--heading-color);
+  margin: 0;
+  font-family: "Charis SIL", serif;
+  font-weight: 700;
+  letter-spacing: 0.5px;
 }
 
 h1 {
   text-align: center;
   font-size: 2em;
-  animation: slideIn 1.6s ease-out;
+  color: var(--heading-color);
+  margin-bottom: 1.2rem;
+  font-family: "Charis SIL", serif;
+  font-weight: 700;
+  letter-spacing: 0.3px;
 }
 
 p {
-  font-size: 1em;
-  /*padding: 20px 60px 40px;*/
+  font-size: 1.05em;
   text-align: justify;
-}
-
-section.info-icons {
-  display: flex;
-  align-content: center;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 20px 10px;
-  gap: 100px;
-}
-
-.icon:hover {
-  filter: drop-shadow(0 0 0.75rem rgb(10, 10, 10));
-}
-
-section.info>div.pic-box {
-  height: 350px;
-  width: 475px;
-  border-radius: 30px;
-  background: var(--accent-color);
-  justify-content: center;
-  align-content: center;
-  object-position: center;
-  text-align: center;
-}
-
-.contact-info-box {
-  margin-top: 15px;
-  gap: 20px;
-  height: 75px;
-  width: 475px;
-  border-radius: 30px;
-  background: var(--bg-color);
-  justify-content: center;
-  align-content: center;
-  object-position: center;
-  text-align: center;
-}
-
-.button {
-  padding: 1px 2px 3px;
-  background-color: var(--bg-color);
-  border-radius: 10px;
-  outline: solid var(--outline);
-  text-align: center;
-  float: right;
-}
-
-.button:hover {
-  background-color: var(--outline);
-}
-
-.about-me {
-  font-family: "Charis SIL", serif;
-  padding: 20px 100px 20px;
-  font-size: 1.5em;
-  margin-top: 30px;
-  text-align: justify;
+  color: var(--text-color);
+  font-weight: 300;
 }
 
 nav.pages {
   font-family: "Charis SIL", serif;
-  font-size: 2em;
-  padding: 5px 5px 5px;
+  font-size: 1.4em;
+  padding: 0.8rem 2rem;
   display: flex;
-  gap: 1em;
-  text-align: right;
-  align-content: right;
-  background-color: var(--accent-color);
+  gap: 1.8em;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: var(--nav-bg);
 }
 
-@keyframes slideIn {
+.button {
+  padding: 0.6rem 1.2rem;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out, transform 0.2s ease-out;
+  margin-left: 10px;
+  border: none;
+  letter-spacing: 0.5px;
+}
+
+.button:hover {
+  background-color: var(--button-hover-bg);
+  color: var(--button-hover-text);
+  transform: translateY(-2px);
+}
+
+#main {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  animation: fadeInUp 1.2s ease-out;
+  gap: 3.5rem;
+  padding: 4rem 2rem;
+  flex-wrap: wrap;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+section.info {
+  display: grid;
+  /* flex-direction: column; */
+  align-items: center;
+  gap: 2rem;
+}
+
+section.info>div.pic-box {
+  width: 340px;
+  height: auto;
+  border-radius: 8px;
+  background: var(--card-bg);
+  padding: 1.2rem;
+  text-align: center;
+  border: 1px solid var(--border-color);
+}
+
+section.info>div.pic-box img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  display: block;
+}
+
+section.info-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 150px 30px;
+  gap: 50px;
+}
+
+.icon {
+  width: 100px;
+  height: 100px;
+  transition: transform 0.3s ease-out, filter 0.3s ease-out;
+  filter: var(--icon-filter);
+}
+
+.icon:hover {
+  filter: var(--icon-hover-filter);
+  transform: scale(1.15);
+}
+
+.about-me {
+  font-family: 'Roboto', sans-serif;
+  padding: 2.5rem;
+  font-size: 1.15em;
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  flex: 1;
+  min-width: 320px;
+  max-width: 620px;
+  border: 1px solid var(--border-color);
+}
+
+.about-me h1 {
+  text-align: left;
+  font-size: 1.9em;
+  margin-top: 0;
+  font-family: "Charis SIL", serif;
+  color: var(--heading-color);
+  margin-bottom: 1.5rem;
+}
+
+@keyframes fadeInDown {
   0% {
     opacity: 0;
-    transform: translateY(100%);
+    transform: translateY(-20px);
   }
 
   100% {
@@ -115,9 +181,79 @@ nav.pages {
   }
 }
 
-#main {
-  display: flex;
-  align-content: center;
-  animation: slideIn 2s ease-out;
-  gap: 5em;
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@media (max-width: 900px) {
+  #main {
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    padding: 3rem 1rem;
+  }
+
+  .about-me {
+    padding: 2rem;
+    font-size: 1.1em;
+    max-width: 90%;
+  }
+
+  header>h1 {
+    font-size: 2.4em;
+  }
+
+  nav.pages {
+    font-size: 1.1em;
+    justify-content: center;
+    padding: 0.8rem 1rem;
+    gap: 1.5em;
+  }
+
+  section.info>div.pic-box {
+    width: 80%;
+    max-width: 300px;
+  }
+
+  .icon {
+    width: 45px;
+    height: 45px;
+  }
+
+  section.info-icons {
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header>h1 {
+    font-size: 2em;
+  }
+
+  .button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9em;
+  }
+
+  nav.pages {
+    font-size: 1em;
+    gap: 1em;
+  }
+
+  .about-me h1 {
+    font-size: 1.7em;
+  }
+
+  p {
+    font-size: 1em;
+  }
 }

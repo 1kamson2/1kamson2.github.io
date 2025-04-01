@@ -3,27 +3,54 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="styles/projects.css" />
-  <title>My projects!</title>
+  <title>Kamil's Projects</title>
 </head>
-<header>
-  <h1 class="charis-sil-regular">Projects</h1>
-  <h1>
-    Here are my listed projects. Each picture after clicking will redirect you
-    onto github site!
-  </h1>
-</header>
 
 <body>
-  <div id="main">
+
+  <nav class="pages">
+    <a class="button" href="projects.html"> Projects </a>
+    <a class="button" href="index.html"> About Me </a>
+  </nav>
+
+  <header>
+    <h1>Projects</h1>
+    <p class="subtitle">
+      Here are some of my projects. Click on an image to view it on GitHub!
+    </p>
+  </header>
+
+  <main id="main">
     <section class="projects">
-      <img src="images/cat1.jpg" alt="Cute cat >.<" width="400" height="300" />
-      <img src="images/cat2.jpg" alt="Even cuter cat! >.<" width="400" height="300" />
-      <img src="images/cat1.jpg" alt="Cute cat >.<" width="400" height="300" />
-      <img src="images/cat2.jpg" alt="Even cuter cat! >.<" width="400" height="300" />
+      <a href="https://github.com/1kamson2/project-link-1" target="_blank" class="project-link">
+        <img src="images/cat1.jpg" alt="Project 1 Screenshot/Image" />
+        <span class="project-title">Neumann (LLM like ChatGPT)</span> <!-- Add title overlay -->
+      </a>
+      <a href="https://github.com/1kamson2/project-link-2" target="_blank" class="project-link">
+        <img src="images/cat2.jpg" alt="Project 2 Screenshot/Image" />
+        <span class="project-title">Video Recommendation Model</span>
+      </a>
+      <a href="https://github.com/1kamson2/project-link-3" target="_blank" class="project-link">
+        <img src="images/cat1.jpg" alt="Project 3 Screenshot/Image" />
+        <span class="project-title">Voxel Engine</span>
+      </a>
+      <a href="https://github.com/1kamson2/project-link-4" target="_blank" class="project-link">
+        <img src="images/cat2.jpg" alt="Project 4 Screenshot/Image" />
+        <span class="project-title">Scrapper</span>
+      </a>
+      <a href="https://github.com/1kamson2/project-link-4" target="_blank" class="project-link">
+        <img src="images/cat2.jpg" alt="Project 4 Screenshot/Image" />
+        <span class="project-title">Raytracer</span>
+      </a>
+      <a href="https://github.com/1kamson2/project-link-4" target="_blank" class="project-link">
+        <img src="images/cat2.jpg" alt="Project 4 Screenshot/Image" />
+        <span class="project-title">WebServer</span>
+      </a>
     </section>
-  </div>
+  </main>
+
 </body>
 
 </html>
