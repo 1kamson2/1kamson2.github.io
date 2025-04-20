@@ -1,24 +1,24 @@
-@import url("https://fonts.googleapis.com/css2?family=Charis+SIL:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
+
 :root {
-  --bg-color: #1f2327;
-  --card-bg: #2a2e34;
-  --nav-bg: #343a40;
-  --header-bg: #2a2e34;
-  --text-color: #adb5bd;
-  --heading-color: #e9ecef;
-  --button-bg: #495057;
-  --button-text: #f8f9fa;
-  --button-hover-bg: #6c757d;
+  --bg-color: #1a1a1a;
+  --card-bg: #262626;
+  --nav-bg: #333333;
+  --header-bg: #262626;
+  --text-color: #d3d3d3;
+  --heading-color: #ff8c00;
+  --button-bg: #404040;
+  --button-text: #ffffff;
+  --button-hover-bg: #595959;
   --button-hover-text: #ffffff;
-  --border-color: rgba(255, 255, 255, 0.08);
-  --icon-filter: grayscale(20%) opacity(80%);
+  --border-color: rgba(255, 140, 0, 0.1);
+  --icon-filter: grayscale(50%) sepia(100%) hue-rotate(-10deg) brightness(80%) saturate(200%);
   --icon-hover-filter: none;
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Source Sans 3", sans-serif;
   font-weight: 400;
   color: var(--text-color);
   background-color: var(--bg-color);
@@ -40,7 +40,7 @@ header>h1 {
   font-size: 2.8em;
   color: var(--heading-color);
   margin: 0;
-  font-family: "Charis SIL", serif;
+  font-family: "Source Sans 3", serif;
   font-weight: 700;
   letter-spacing: 0.5px;
 }
@@ -50,7 +50,7 @@ h1 {
   font-size: 2em;
   color: var(--heading-color);
   margin-bottom: 1.2rem;
-  font-family: "Charis SIL", serif;
+  font-family: "Source Sans 3", serif;
   font-weight: 700;
   letter-spacing: 0.3px;
 }
@@ -63,7 +63,7 @@ p {
 }
 
 nav.pages {
-  font-family: "Charis SIL", serif;
+  font-family: "Source Sans 3", serif;
   font-size: 1.4em;
   padding: 0.8rem 2rem;
   display: flex;
@@ -106,7 +106,6 @@ nav.pages {
 
 section.info {
   display: grid;
-  /* flex-direction: column; */
   align-items: center;
   gap: 2rem;
 }
@@ -164,7 +163,7 @@ section.info-icons {
   text-align: left;
   font-size: 1.9em;
   margin-top: 0;
-  font-family: "Charis SIL", serif;
+  font-family: "Source Sans 3", serif;
   color: var(--heading-color);
   margin-bottom: 1.5rem;
 }
@@ -192,7 +191,6 @@ section.info-icons {
     transform: translateY(0);
   }
 }
-
 
 @media (max-width: 900px) {
   #main {
