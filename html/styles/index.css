@@ -115,7 +115,7 @@ section.info>div.pic-box {
   height: auto;
   border-radius: 8px;
   background: var(--card-bg);
-  padding: 1.2rem;
+  padding: 2em;
   text-align: center;
   border: 1px solid var(--border-color);
 }
