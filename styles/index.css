@@ -72,16 +72,13 @@ nav.pages {
 }
 
 .button {
-  padding: 0.6rem 1.2rem;
   background-color: var(--button-bg);
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
   color: var(--button-text);
-  border-radius: 5px;
+  padding: 0.6rem 1.2rem;
   text-decoration: none;
-  font-weight: 500;
   transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out, transform 0.2s ease-out;
-  margin-left: 10px;
-  border: none;
-  letter-spacing: 0.5px;
 }
 
 .button:hover {
@@ -92,11 +89,10 @@ nav.pages {
 
 #main {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: right;
+  justify-content: right;
   animation: fadeInUp 1.2s ease-out;
-  gap: 3.5rem;
+  gap: 1em;
   padding: 4rem 2rem;
   flex-wrap: wrap;
   max-width: 1250px;
@@ -104,27 +100,11 @@ nav.pages {
 }
 
 #main>section.info {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
+  display: block;
+  flex-direction: column;
   gap: 1rem;
 }
 
-section.info>div.pic-box {
-  width: 320px;
-  height: auto;
-  border-radius: 8px;
-  background: var(--card-bg);
-  padding: 2em;
-  text-align: center;
-  border: 1px solid var(--border-color);
-}
-
-section.info>div.pic-box img {
-  width: inherit;
-  height: auto;
-  border-radius: 4px;
-}
 
 section.info-icons {
   display: flex;
@@ -135,12 +115,17 @@ section.info-icons {
 }
 
 .icon {
-  width: 115px;
-  height: 115px;
+  height: 100px;
+  width: 100px;
+  margin: 0px 0px 30px 20px;
   padding: 10px 10px 10px 10px;
-  margin: 10px 20px 10px 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none;
+  display: block;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
   transition: transform 0.3s ease-out, filter 0.3s ease-out;
-  filter: var(--icon-filter);
 }
 
 .icon:hover {
@@ -194,7 +179,6 @@ section.info-icons {
 
 @media (max-width: 1000px) {
   #main {
-    flex-direction: column;
     align-items: center;
     gap: 2.5rem;
     padding: 3rem 1rem;
@@ -215,16 +199,6 @@ section.info-icons {
     justify-content: center;
     padding: 0.8rem 1rem;
     gap: 1.5em;
-  }
-
-  section.info>div.pic-box {
-    width: 80%;
-    max-width: 300px;
-  }
-
-  .icon {
-    width: 45px;
-    height: 45px;
   }
 
   section.info-icons {
