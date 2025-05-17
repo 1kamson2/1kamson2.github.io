@@ -13,8 +13,6 @@
   --button-hover-bg: #595959;
   --button-hover-text: #ffffff;
   --border-color: rgba(255, 140, 0, 0.1);
-  --icon-filter: grayscale(50%) sepia(100%) hue-rotate(-10deg) brightness(80%) saturate(200%);
-  --icon-hover-filter: none;
 }
 
 body {
@@ -137,8 +135,8 @@ section.info-icons {
 }
 
 .icon {
-  width: 125px;
-  height: 125px;
+  width: 115px;
+  height: 115px;
   padding: 10px 10px 10px 10px;
   margin: 10px 20px 10px 20px;
   transition: transform 0.3s ease-out, filter 0.3s ease-out;
@@ -146,8 +144,7 @@ section.info-icons {
 }
 
 .icon:hover {
-  filter: var(--icon-hover-filter);
-  transform: scale(1.15);
+  transform: scale(1.10);
 }
 
 .about-me {
