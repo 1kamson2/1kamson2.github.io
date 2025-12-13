@@ -1,9 +1,4 @@
-import type { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'Next.js on GitHub Pages',
-  description: 'Deploy your static Next.js site to GitHub Pages.',
-};
+import "./globals.css";
 
 export default function RootLayout({
   children,
@@ -12,7 +7,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <head>
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+      </style>
+      </head>
+      <body>
+        {children}
+      </body>
     </html>
   );
 }
